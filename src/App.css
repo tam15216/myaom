@@ -1,0 +1,102 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0;
+  padding-top: 50px;
+  gap: 20px;
+  flex-wrap: wrap; /* เพิ่ม flex-wrap */
+}
+
+.card {
+  width: 350px;
+  min-width: 250px;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin: 10px;
+}
+
+.card-header {
+  background-color: #333;
+  padding: 16px;
+  text-align: center;
+}
+
+.card-header .text-header {
+  margin: 0;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+
+.card-body {
+  padding: 16px;
+  height: 55vh; /* กำหนดความสูงของการ์ด */
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 1px; /* เว้นระยะระหว่างฟอร์ม */
+  height: 100%; /* ให้ฟอร์มสูงเต็ม card-body */
+}
+.form-group {
+  margin-bottom: 2px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 1px;
+}
+
+
+.form-group input[type="number"] {
+  width: 90%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+}
+
+.btn {
+  margin-top: auto; /* ดันปุ่มไปชิดด้านล่าง */
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 15px;
+  background-color: #333;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer
+}
+
+.btn:hover {
+  background-color: #ccc;
+  color: #333;
+}
+
+
+
+
+/* Responsive: ปรับขนาดฟอนต์และปุ่มสำหรับมือถือ */
+@media (max-width: 500px) {
+  .card-header .text-header {
+    font-size: 16px;
+  }
+  .btn {
+    font-size: 14px;
+    padding: 10px 16px;
+    margin-left: 0;
+  }
+  .form-group input[type="number"]
+   {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
